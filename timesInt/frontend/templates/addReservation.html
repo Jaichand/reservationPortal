@@ -1,0 +1,89 @@
+<div class="col-sm-12 m-5">
+  <button type="button" class="btn btn-primary button-alignment" ng-click="viewRes()">View Reservations</button>
+</div>
+<div class="m-t-90">
+	<div class="col-sm-12 m-5">
+		<div class="col-sm-6">
+			<div class="col-sm-3">
+				<label>FirstName:</label>
+				<span class="danger">*</span>
+			</div>
+			<div class="col-sm-9">
+				<input type="text" ng-model="reservation.firstName" required>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="col-sm-3">
+				<label>LastName:</label>
+				<span class="danger">*</span>
+			</div>
+			<div class="col-sm-9">
+				<input type="text" ng-model="reservation.lastName">
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12 m-5">
+		<div class="col-sm-6">
+			<div class="col-sm-3">
+				<label>Email:</label>
+				<span class="danger">*</span>
+			</div>
+			<div class="col-sm-9">
+				<input type="email" ng-model="reservation.email" required="true">
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="col-sm-3">
+				<label>Guests:</label>
+				<span class="danger">*</span>
+			</div>
+			<div class="col-sm-9">
+				<input type="number" ng-model="reservation.noOfGuests">
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12 m-5">
+		<div class="col-sm-12">
+			<div class="col-sm-3">
+				<label>Comments</label>
+				<span class="danger">*</span>
+			</div>
+			<div class="col-sm-9 m-r">
+				<textarea 
+					name=""
+					id="" 
+					cols="23" 
+					rows="5"
+					ng-model="reservation.comments">
+				</textarea>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12 m-5">
+		<div class="col-sm-8">
+			<div class="col-sm-3">
+				<label>Booking Date</label>
+				<span class="danger">*</span>
+			</div>
+			<div class="col-sm-9">
+				<div class="col-sm-12">{{reservation.reservedOn | date:'fullDate' }}</div>
+				<div class="col-sm-12">
+					<div 
+						uib-datepicker 
+						ng-model="reservation.reservedOn"
+						class="well well-sm date-picker-css" 
+						datepicker-options="options">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+				<span class="danger">{{messege}}</span>
+				<button
+					type="button" 
+					class="btn btn-primary button-alignment" 
+					ng-click="addReservation()"
+					>Add Reservation</button>
+		</div>
+	</div>
+</div>

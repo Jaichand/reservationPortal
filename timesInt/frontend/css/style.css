@@ -1,0 +1,46 @@
+.header {
+    text-align: center;
+    border: 1px solid;
+    padding: 4px;
+}
+.body-back {
+	background: #e3e3e5;
+	height: 100%;
+	position: fixed;
+	right: 0;
+    left: 0;
+    overflow: auto;
+}
+.button-alignment {
+    right: 0;
+    position: absolute;
+}
+
+.m-t-55{
+    margin-top: 55px;
+}
+.m-5 {
+    margin: 5px;
+}
+.m-t-90 {
+  margin-top: 90px;
+}
+.m-r {
+    margin-left: -138px;
+}
+.date-picker-css {
+    display: inline-block;
+    min-height: 251px;
+}
+.danger{
+  color: red;
+}
+.date-filter {
+	padding: 0 !important;
+	border-radius: 1px !important;
+	font-size: 12px !important;
+}
+.t-button {
+	cursor: pointer;
+	margin: 4%;
+}
